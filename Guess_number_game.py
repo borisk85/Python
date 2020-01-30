@@ -1,9 +1,12 @@
+# Import random module
 import random
 
+# Global variables
 x = random.randint(1, 100)
 user_num = 0
 cnt = 0
 
+# Game
 while True:
     user_num = int(input('Try to guess the number from 1 to 100: '))
     cnt += 1
