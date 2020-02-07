@@ -1,10 +1,12 @@
 # Import random module
 import random
 
+
 # Global variables
 x = random.randint(1, 100)
 user_num = 0
 cnt = 0
+
 
 # Game
 while True:
