@@ -5,7 +5,6 @@ from tkinter import *
 root = Tk()
 root.geometry('250x223+400+100')
 root.title('Rainbow colors')
-root.iconbitmap('Rainbow.ico')
 root.resizable(0, 0)
 
 # Adding a label
