@@ -1,26 +1,33 @@
 #--------- Global Variables -----------
 
+
 # Board to hold the game
 board = ['-', '-', '-',
          '-', '-', '-',
          '-', '-', '-']
 
+
 # Lets us know if the game is over yet
 game_still_going = True
+
 
 # Tells us who the winner is
 winner = None
 
+
 # Tells us who the current player is (X goes first)
 current_player = 'X'
 
+
 # ------------ Functions --------------
+
 
 # Display the game board to the screen
 def display_board():
     print(board[0] + ' | ' + board[1] + ' | ' + board[2])
     print(board[3] + ' | ' + board[4] + ' | ' + board[5])
     print(board[6] + ' | ' + board[7] + ' | ' + board[8])
+
 
 # Play a game of tic tac toe
 def play_game():
@@ -44,6 +51,7 @@ def play_game():
         print(winner + ' won.')
     elif winner == None:
         print('Tie.')
+
 
 # Handle a turn for an arbitrary player
 def handle_turn(player):
@@ -73,10 +81,12 @@ def handle_turn(player):
     board[position] = player
     display_board()
 
+
 # Check to see if the game should be over
 def check_if_game_over():
     check_for_winner()
     check_for_tie()
+
 
 # Check to see if somebody has won
 def check_for_winner():
@@ -97,6 +107,7 @@ def check_for_winner():
     else:
         winner = None
 
+
 # Check the rows for a win
 def check_rows():
 
@@ -112,6 +123,7 @@ def check_rows():
     elif board[6] == board[7] == board[8] != '-':
         game_still_going = False
         return board[6]
+
 
 # Check the columns for a win
 def check_columns():
@@ -129,6 +141,7 @@ def check_columns():
         game_still_going = False
         return board[2]
 
+
 # Check the diagonals for a win
 def check_diagonals():
 
@@ -142,6 +155,7 @@ def check_diagonals():
         game_still_going = False
         return board[6]
 
+
 # Check if there is a tie on the board
 def check_for_tie():
 
@@ -151,6 +165,7 @@ def check_for_tie():
     # Figure out the conditions for a tie
     if '-' not in board:
         game_still_going = False
+
 
 # Flip the current player from X to O, or O to X
 def flip_player():
@@ -163,7 +178,9 @@ def flip_player():
     elif current_player == 'O':
         current_player = 'X'
 
+
 # ------------ Start Execution -------------
+
 
 # Play a game of tic tac toe
 play_game()
